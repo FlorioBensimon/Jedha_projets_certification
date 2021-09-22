@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wine-O-Meter</title>
+  <link href="style.css" rel="stylesheet" type="text/css" >
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+        *{
+            
+            background-image: url('https://backgroundcheckall.com/wp-content/uploads/2017/12/wine-background-5.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 26px;
+        text-shadow: 4px 4px 4px #aaa;
+        }
+    </style>
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict the quality of your wine !</h1>
+     <h3> Fill in the following values to predict wine's quality: </h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_live')}}" method="post">
+    	<input type="text" name="fixedacidity" placeholder="Fixed Acidity [3-16]" required="required" />
+      <input type="text" name="volatileacidity" placeholder="Volatile Acidity [0-2]" required="required" />
+		  <input type="text" name="citricacid" placeholder="Citric Acid [0-2]" required="required" />
+      <input type="text" name="residualsugar" placeholder="Residual Sugar [0-100]" required="required" />
+      <input type="text" name="chlorides" placeholder="Chlorides [0-1]" required="required" />
+      <input type="text" name="freesulfurdioxide" placeholder="Free Sulfur Dioxide [0-500]" required="required" />
+      <input type="text" name="totalsulfurdioxide" placeholder="Total Sulfur Dioxide [0-500]" required="required" />
+      <input type="text" name="density" placeholder="Density [0-2]" required="required" />
+      <input type="text" name="pH" placeholder="PH [3-5]" required="required" />
+      <input type="text" name="sulphates" placeholder="Sulphates [0-2]" required="required" />
+      <input type="text" name="alcohol" placeholder="Alcohol [5-20]" required="required" />
+
+      <button type="submit" class="btn">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
