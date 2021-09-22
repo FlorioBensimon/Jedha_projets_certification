@@ -1,0 +1,15 @@
+@font-face { font-family: Sprite; src: url('fonts/SpriteGraffiti-Shadow.otf');} 
+@font-face { font-family: Spriite; src: url('fonts/SpriteGraffiti-Regular.otf');} 
+@font-face { font-family: Spriiite; src: url('fonts/SpriteGraffiti-Extras.otf');} 
+
+ 
+ h1{
+     font-family: Sprite;
+     font-size: 50pt;
+ }
+
+ h2{
+    font-family: Spriite;
+    font-size: 40pt;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAPP3RIZER</title>
+    <link href="style.css" rel="stylesheet" type="text/css" >
+    <style>
+        *{
+            padding:auto;
+            margin:auto;
+            text-align:center;
+            background-image: url('legend2.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: auto auto
+
+        }
+    </style>
+</head>
+<body>
+    <h1>-'r4PP3RizE'-</h1>
+    <p style="font-family:Spriite; font-style: italic; font-size:large;"> ''Ever wondered who's your rapper look-alike ?''</p>
+    <input id="image-selector" type="file"/>
+    <button id="predict-button">Rapperize me</button>
+    <p style="font-family: Spriite; font-size:larger;">Upload a picture then click on "Rapperize Me"</p>
+    <p style="font-size: 40px; font-family: Sprite;"> <span id="prediction"></span></p>
+    <img id="selected-image" src=""/>
+    <div class="wrap-box">
+    <img src="travis.jpg" align="bottom" style="position:fixed; left:35px; bottom:0px; width:18%; height:47%; border:none;" >
+    <img src="juice.png" align="bottom" style="position:fixed; right:60px; bottom:0px; width:20%; height:50%; border:none;" >
+    <img src="xxx.jpg" align="top" style="position:fixed; left:70px; top:0px; width:20%; height:50%; border:none;" >
+    <img src="xx.jpg" align="top" style="position:fixed; right:90px; top:35px; width: 18%; height:43%; border:none;" >
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        let base64Image;
+        $("#image-selector").change(function() {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let dataURL = reader.result;
+                $('#selected-image').attr("src", dataURL).width('400px').height('400px');
+                base64Image = dataURL.replace(/^data:image\/[a-z]+;base64,/, "");
+                console.log(base64Image);
+            }
+            reader.readAsDataURL($("#image-selector")[0].files[0]);
+            $("#prediction").text("");
+        });
+
+        $("#predict-button").click(function(event){
+            let message = {
+                image: base64Image
+            }
+            console.log(message);
+            $.post("http://192.168.1.12:5000/predict", JSON.stringify(message), function(response){
+                $("#prediction").text(response.prediction);
+                console.log(response);
+            });
+        });
+    </script>
+    </body>
+    </html>
