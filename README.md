@@ -25,5 +25,3 @@
   #8: Rapperize (projet final)
   <br />
   </p>
-</p>
-<br />
