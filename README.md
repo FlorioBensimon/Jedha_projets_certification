@@ -193,7 +193,6 @@
 <br>
 
 >Bloc n°6 - Direction de projets de gestion de données
-</ol>
 <br><br>
 
 
