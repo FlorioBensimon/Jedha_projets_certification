@@ -186,7 +186,9 @@
 >Thanks to an online hosted application and model built on flask, you are able to upload you picture and the model will return a prediction with. 
 >Feel free to have a look by yourself and perhaps in the future try it out by yourselfl ! 
 >The final project folder also contains the presentation with every useful informations to get a deeper understanding of my motivations behind this project.
-
+</p>
+<br>
+   
 <u>French Topic related regarding the certification:</u>
 <br>
 
