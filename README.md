@@ -174,6 +174,23 @@
 >Bloc n°5 - Industrialisation d'un algorithme d'apprentissage automatique et automatisation des processus de décision
 <br><br>
 
+## 8_Rapperize
+<br>
+
+<u>What is asked?</u>
+<p>
+
+>This project is the final project as a Jedha Students. 
+>I have been working on a deep learning classification algorithm that allows you to find out wich rapper/singer is your look alike. 
+
+>Thanks to an online hosted application and model built on flask, you are able to upload you picture and the model will return a prediction with. 
+>Feel free to have a look by yourself and perhaps in the future try it out by yourselfl ! 
+>The final project folder also contains the presentation with every useful informations to get a deeper understanding of my motivations behind this project.
+   
+>Bloc n°6 - Direction de projets de gestion de données
+
+</ol>
+<br><br>
 
 
 
