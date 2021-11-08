@@ -189,9 +189,8 @@
 
 <u>French Topic related regarding the certification:</u>
 <br>
-   
->Bloc n°6 - Direction de projets de gestion de données
 
+>Bloc n°6 - Direction de projets de gestion de données
 </ol>
 <br><br>
 
